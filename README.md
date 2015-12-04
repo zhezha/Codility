@@ -1,12 +1,5 @@
 # Codility
-Codility test solution
-
-###lesson 3
-<p>GenomicRangeQuery</p>
-
-###lesson 4
-<p>MergeSort</P>
-<p>NumberOfDiscIntersection</p>
+Codility test solutions
 
 ###Jeppesen test
 <p>count_country</p>
