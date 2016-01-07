@@ -28,7 +28,7 @@ class Solution {
         for (int i = 0; i < 2 * N; i++)
         {
             if (sign[i] == 0)
-                numStart ++;
+                numStart += 1;
             else if (sign[i] == 1) {
                 numStart -= 1;
                 result += numStart;
@@ -40,7 +40,14 @@ class Solution {
         return result;
     }
     
-    
+    // The process is similar to count bracket pair.
+	// The counting starts from the smallest startPoint,
+	// when meet a start point, counter increment by 1,
+	// when meet an end point, the counter decrement by 1 and out put an intermediate result.
+	// For example, A[0] = 1, A[1] = 5, A[2] = 2, A[3] = 1, A[4] = 4, A[5] = 0,
+	// the sequence of start point and end point is:
+	// s(-4), s(-1), s(0), s(0), e(1);   s(2), e(4);   e(4);   s(5), e(5);   e(6);   e(8).
+	// The result is 3(= 1 + 1 + 1 + 1 - 1) + 3(= 3 + 1 - 1) + 2(= 3 - 1) + 2(= 2 + 1 - 1) + 1(= 2 - 1) + 0(=1 - 1)
     int[] mergeArrays(long[] A, long[] B) {
         int N = A.length;
         int[] sign = new int[2 * N];

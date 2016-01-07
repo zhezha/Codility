@@ -21,7 +21,7 @@ vector<int> merge_sort(vector<int> &A) {
 	// b is a temp vector for storing middle result
     vector<int> b(N);
     
-	// first sort segment with length with 2, then 4, 8, 16, ...
+	// first sort segment with length of 2, then 4, 8, 16, ...
     for (int seg = 1; seg < N; seg += seg) {
 		// divide the segment into two parts: (start, start + seg) and (start + seg, start + 2*seg)
         for (int start = 0; start < N; start += 2*seg) {
